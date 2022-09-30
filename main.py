@@ -35,7 +35,7 @@ async def button(ctx):
     interaction = await client.wait_for("button_click", check= lambda i: i.component.label.startswith("Click"))
     await interaction.respond(content="Haha you've been hacked retard!")
 
-@client.command(aliases=['bal'])
+@client.command(aliases=['bal', 'bl'])
 async def balance(ctx, user: discord.Member = None):
     if user == None:
         user = ctx.author
